@@ -1,0 +1,55 @@
+{% extends "RestaurantManagementSystem/BaseOrder.html" %}
+
+{% block content %}
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td><b>ID</b></td>
+            <td><b>NAME</b></td>
+            <td><b>DESCRIPTION</b></td>
+            <td><b>PRICE(in rs.)</b></td>
+            <td><b>TYPE</b></td>
+            <td><b>PHOTO</b></td>
+            <!-- <td>
+                <a href="{% url 'add_fooditem' %}" class="href btn btn-outline-sucess">
+                    <i class="fas fa-plus"></i>Add New
+                </a>
+            </td> -->
+            <!-- <td><b>UPDATE</b></td> -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for fitem in fitems %}
+        <tr>
+            <td> {{ fitem.fooditem_id }} </td>
+            <td> {{ fitem.fooditem_name }} </td>
+            <td> {{ fitem.fooditem_description }} </td>
+            <td> {{ fitem.fooditem_price }} </td>
+            <td> {{ fitem.category_id }} </td>
+            <td><img src="{{ fitem.fooditem_photo.url }}" alt="{{ fitem.fooditem_name }}" width="150px" height="150px"/> </td>
+            <td>
+                <!-- <a href="{% url 'update_fooditem' fitem.fooditem_id %}" class="btn text-secondary px-0">
+                    <i class="far fa-edit fa-lg"></i>
+                </a> -->
+                <form action="{%url 'add_cart' fitem.fooditem_id %}" method="POST" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">
+                        <i class="far fa-cutlery"></i>Add to Cart
+                    </button>
+                </form>
+            </td>
+            <!-- <td> <button type="submit" formaction="/RestaurantManagementSystem/deletefooditem/" >Delete</button> </td>
+            <td> <button type="submit" formaction="{% url 'update_fooditem' fitem.fooditem_id %}" >Update</button> </td> -->
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        
+    </tfoot>
+</table>
+<form action="{% url 'view_cart' %}" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fa fa-cutlery" aria-hidden="true"></i>View Cart</button>
+</form>
+
+{% endblock content %}

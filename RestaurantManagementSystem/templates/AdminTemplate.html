@@ -1,0 +1,39 @@
+{% extends "RestaurantManagementSystem/BaseAdmin.html"%}
+
+{% block content %}
+{% load static %}
+<br/><br/>
+<div class="row">
+<div class="col-sm-4">
+    <div class="card" >
+        <img class="card-img-top" src="{% static 'Customer.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">Customer Details</h5>
+        <p class="card-text">Show Customer details who visited restaurant.</p>
+        <a href="{% url 'show_customer' %}" class="btn btn-primary">Customer Details</a>
+        </div>
+    </div>
+</div>
+<div class="col-sm-4">
+    <div class="card">
+        <img class="card-img-top" src="{% static 'FoodItem.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">Food Details</h5>
+        <p class="card-text">Add,Update or Delete the food item.</p>
+        <a href="{% url 'list_fooditem' %}" class="btn btn-primary">Food Item details</a>
+        </div>
+    </div>
+</div>
+<div class="col-sm-4">
+    <div class="card">
+        <img class="card-img-top" src="{% static 'employee.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">Employee Details</h5>
+        <p class="card-text">Add,Update or Delete the Employee Details.</p>
+        <a href="{% url 'list_employee' %}" class="btn btn-primary">Employee details</a>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock content%}

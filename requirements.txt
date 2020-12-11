@@ -1,0 +1,46 @@
+
+Student 1 : Utsav Bheda (CE012)
+Student 2 : Saurabh Biswas (CE019)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Project Title : Restaurant Management System
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Python version : 3.8.1
+Django version : 3.0.2
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+asgiref==3.2.3
+astroid==2.3.3
+colorama==0.4.3
+Django==3.0.2
+django-bootstrap-form==3.4
+isort==4.3.21
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+Pillow==7.0.0
+pylint==2.4.4
+pytz==2019.3
+six==1.14.0
+sqlparse==0.3.0
+wrapt==1.11.2
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Internet Connection is required.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+List Of Requirements :-
+
+1. Login module for Admin.
+2. Admin can view customer list who had visited the restaurant.
+3. Admin can view details of existing employee, register new employee details, can change the details of existing employee and also can delete the employee details.
+4. Admin can view existing food items offered by restaurant, register new food item, can edit the existing food item details and can delete the food item details.
+5. On customer request, based on availibilty of table, appropriate table no should be assigned to customer.
+6. Customer can view available food items and able to order the food. At the time of ordering they can see which items they have selected (cart).
+7. Bill should be generated automatically upon customers' order.
+	

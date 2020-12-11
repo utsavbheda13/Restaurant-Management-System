@@ -1,0 +1,76 @@
+{% load static %}
+<html dir="ltr"><head>
+        <title>Menu Items</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+    </head>
+    <body style="background-color: #e6ffff">
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e6ffff">
+  <span class="navbar-brand mb-0 h1">
+    <img src="{% static 'mylogo.png'  %}" width="50px" height="50px">
+  </span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'book_table' %}">Book Table</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+      </li>
+      
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0" action="{% url 'login' %}">
+      <img src="{% static 'Admin_logo.png' %}" width="50px" height="50px">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+    </form>
+  </div>
+</nav>
+        {% load static %}
+<br/><br/>
+<div class="row">
+<div class="col-sm-4">
+    <div class="card" >
+        <img class="card-img-top" src="{% static 'Beverages.jpg' %}" alt="Beverages">
+        <div class="card-body">
+        <h5 class="card-title">Beverages</h5>
+        <p class="card-text">Beverages are one kind of cold drinks.</p>
+        <a href="{% url 'show_beverages' %}" class="btn btn-primary">Beverages</a>
+        </div>
+    </div>
+</div>
+<div class="col-sm-4">
+    <div class="card">
+        <img class="card-img-top" src="{% static 'MainCourse.jpg' %}" alt="Main Course">
+        <div class="card-body">
+        <h5 class="card-title">Main Course</h5>
+        <p class="card-text">Main Course contains sabji, roti and rice.</p>
+        <a href="{% url 'show_maincourse' %}" class="btn btn-primary">Main Course</a>
+        </div>
+    </div>
+</div>
+<div class="col-sm-4">
+    <div class="card">
+        <img class="card-img-top" src="{% static 'Desert.jpeg' %}" alt="Desert">
+        <div class="card-body">
+        <h5 class="card-title">Desert</h5>
+        <p class="card-text">Desert contains ice-cream,sweet items.</p>
+        <a href="{% url 'show_desert' %}" class="btn btn-primary">Desert</a>
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body></html>
